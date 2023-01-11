@@ -49,11 +49,11 @@ echo -e "\n"
 printf "\033[1m@Assistant > \033[0m"
 echo "$RESPONSE_MESSAGE"
 
-# Write the response into an reponse.log
+# Write the response into a reponse.log
 echo -n "ai:$RESPONSE_MESSAGE " > ./response.log
 
 # Remove rogue new-line formatting and add the response to the chat.log
-echo -n "$(<./response.log )" | tr -d '\n' >> ~/.askassist/chat.log
+echo -n "$(<./response.log )" | tr -d '\n' >> ./chat.log
 
 # More fancy terminal formatting
 echo -e "\e[1m---------"
