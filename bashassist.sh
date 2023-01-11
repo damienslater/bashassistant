@@ -6,7 +6,7 @@ API_KEY="my key"
 # Set the endpoint URL for the OpenAI API
 ENDPOINT_URL="https://api.openai.com/v1/completions"
 
-# Start a new conversation by (hack alert) deleting the old one!
+# Start a new conversation by deleting the old one
 rm -f ./chat.log
 
 # Continuously ask for questions
@@ -25,7 +25,7 @@ echo -n "human: $QUESTION " >> ./chat.log
 tput sgr0
 echo -e "\e[1m---------"
 
-# Read the chat.log, including the user's last question, ready to sent to chatGPT
+# Read the chat.log, including the user's last question, ready to send to chatGPT
 QUERY=`cat ./chat.log`
 
 # Set the JSON payload for the request
